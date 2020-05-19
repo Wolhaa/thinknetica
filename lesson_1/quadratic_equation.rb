@@ -4,6 +4,10 @@ abc = []
   abc << gets.to_f
 end
 a, b, c = abc
+if a == 0
+  puts "(a) cannot be equal to 0!"
+  exit
+end
 d = b**2 - 4*a*c
 if d > 0
   d_root = Math.sqrt(d)
