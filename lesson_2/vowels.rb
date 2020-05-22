@@ -1,7 +1,8 @@
-  hash = {}
-  number = 1
-  ("a".."z").each do |v|
-    hash[v] = number if ["a","e","i","o","u","y"].include?(v)
-    number +=1
+  vowels = {}
+  arr_vowels = ["a", "e", "i", "o", "u", "y"]
+
+  ("a".."z").each.with_index(1) do |v, i|
+    vowels[v] = i if arr_vowels.include?(v)
   end
-  puts hash
+
+  puts vowels
