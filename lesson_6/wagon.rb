@@ -1,21 +1,16 @@
 require_relative 'manufacturer.rb'
+require_relative 'validation.rb'
 
 
 class Wagon
   attr_reader :type
 
   include Manufacturer
+  include Validation
 
   def initialize(type)
     @type = type
     validate!
-  end
-
-  def valid?
-    validate!
-    true
-  rescue
-    false
   end
 
 

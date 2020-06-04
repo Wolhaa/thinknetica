@@ -1,8 +1,11 @@
 require_relative 'instance_counter.rb'
+require_relative 'validation.rb'
 
 
 class Station
   include InstanceCounter
+  include Validation
+
 
   attr_reader :name
   attr_accessor :trains
@@ -16,16 +19,9 @@ class Station
   def initialize(name)
     register_instance
     @name = name
+    validate!
     @trains = []
     @@stations += 1
-    validate!
-  end
-
-  def valid?
-    validate!
-    true
-  rescue
-    false
   end
 
   def train_arrival(train)

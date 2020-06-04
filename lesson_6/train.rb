@@ -1,10 +1,12 @@
 require_relative 'manufacturer.rb'
 require_relative 'instance_counter.rb'
+require_relative 'validation.rb'
 
 
 class Train
   include InstanceCounter
   include Manufacturer
+  include Validation
 
   NUMBER_FORMAT = /^[а-яa-z0-9]{3}-?[а-яa-z0-9]{2}$/i
 
@@ -20,15 +22,8 @@ class Train
     @type = type
     @wagons = []
     @speed = 0
+    validate!
     @@trains[number] = self
-    validate!
-  end
-
-  def valid?
-    validate!
-    true
-  rescue
-    false
   end
 
   def increase_speed(speed)
