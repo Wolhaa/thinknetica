@@ -3,13 +3,14 @@ require_relative 'validation.rb'
 
 
 class Wagon
-  attr_reader :type, :volume
+  attr_reader :type, :volume, :number
   attr_accessor :occupied_volume
 
   include Manufacturer
   include Validation
 
-  def initialize(type, volume)
+  def initialize(type, volume, number)
+    @number = number
     @type = type
     @volume = volume
     @occupied_volume = 0
