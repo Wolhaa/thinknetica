@@ -18,6 +18,8 @@ class Wagon
   end
 
   def take_volume(quantity)
+    raise "Недостаточно места в этом вагоне" if @occupied_volume + quantity > @volume
+
     @occupied_volume += quantity
   end
 

@@ -84,7 +84,7 @@ class Train
 
   def each_wagon
     @wagons.each { |wagon| yield wagon }
-end
+  end
 
 
   protected
