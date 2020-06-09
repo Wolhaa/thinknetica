@@ -1,0 +1,29 @@
+Style/IdenticalConditionalBranches:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassVars:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 125
+
+Metrics/MethodLength:
+  Max: 36
+
+Metrics/BlockLength:
+  Max: 26
+
+Metrics/CyclomaticComplexity:
+  Max: 11
+
+Metrics/ClassLength:
+  Max: 361
