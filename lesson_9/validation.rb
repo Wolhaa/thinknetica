@@ -35,7 +35,7 @@ module Validation
     end
 
     def validate_type(value, options)
-      raise 'Не корректный тип' unless value.is_a?(type)
+      raise 'Не корректный тип' unless value.is_a?(options)
     end
 
     def valid?

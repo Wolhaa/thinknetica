@@ -9,7 +9,7 @@ class Route
 
   attr_reader :stations, :first_station, :last_station
   validate :first_station, :Station
-  validate :last_station, :Station
+  validate :last_station, Station
 
   def initialize(first_station, last_station)
     @first_station = first_station
